@@ -8,17 +8,6 @@ class SearchTextField extends StatefulWidget {
 class _SearchTextField extends State<SearchTextField> {
   @override
   Widget build(BuildContext context) {
-    /*
-    Widget textField = TextField(
-        decoration: InputDecoration(
-            hintText: '搜索',
-            hintStyle: TextStyle(fontSize: 14, color: Color(0xffffffff)),
-            contentPadding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-            border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(15),
-                borderSide: BorderSide(color: Color(0xffffffff)))),
-        style: TextStyle(fontSize: 14, color: Color(0xffffffff)));
-    */
     Widget textField = Container(
       height: 29,
       padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
