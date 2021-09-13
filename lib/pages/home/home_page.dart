@@ -8,8 +8,10 @@ class HomePage extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
+    print(controller.bannerList);
     return Scaffold(
-      //appBar: AppBar(title: const Text('HomePage'),),
+      appBar: AppBar(
+          title: Obx(() => Text("index: ${controller.bannerList.length}"))),
       body: Container(
         decoration: BoxDecoration(color: Colors.white),
         child: Column(children: [Header(), Text('asd'), Text('wwwww')]),

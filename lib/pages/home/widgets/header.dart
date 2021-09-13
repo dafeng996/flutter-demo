@@ -1,37 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:start_app/pages/home/home_controller.dart';
 import './search_text_field.dart';
 
-class _Swipper {
-  _Swipper({this.text = ''}) : super();
-
-  final String text;
-}
-
 class Header extends StatelessWidget {
-  final List<_Swipper> datalist = [
-    _Swipper(text: '1'),
-    _Swipper(text: '2'),
-    _Swipper(text: '3'),
-    _Swipper(text: '4'),
-    _Swipper(text: '5'),
-    _Swipper(text: '6'),
-  ];
-
-  static get text => null;
-
   @override
   Widget build(BuildContext context) {
+    Widget pageView = GetBuilder<HomeController>(
+        builder: (c) => Obx(() => PageView(
+            children: c.bannerList
+                .map((banner) => Obx(() => Text(
+                      "${banner.value.title}",
+                      style: TextStyle(color: Colors.white),
+                    )))
+                .toList())));
+
     Widget bannerSlide = Container(
       height: 210,
       decoration: BoxDecoration(color: Colors.black),
-      child: PageView(
-        children: datalist
-            .map((e) => Text(
-                  e.text,
-                  style: TextStyle(color: Colors.white),
-                ))
-            .toList(),
-      ),
+      child: pageView,
     );
 
     Widget bannerSlideContainer = Stack(

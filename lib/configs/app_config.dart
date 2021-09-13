@@ -1,5 +1,5 @@
 class _NetworkConfig {
-  final baseUrl = 'http://localhost:8001';
+  final baseUrl = 'http://localhost:8002';
   final connectTimeout = 5000;
   final receiveTimeout = 3000;
 }

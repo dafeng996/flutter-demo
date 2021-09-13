@@ -1,14 +1,12 @@
 class Banner {
-  late String id, img;
-  late int type;
+  late String title, image;
 
-  Banner({this.id = '', this.img = '', this.type = 1});
+  Banner({this.title = '', this.image = ''});
 
   Banner.fromMap(Map<String, dynamic> map) {
-    id = map['id'];
-    img = map['img'];
-    type = map['type'];
+    title = map['title'];
+    image = map['image'];
   }
 
-  Map<String, dynamic> toMap() => {'id': id, 'img': img, 'type': type};
+  Map<String, dynamic> toMap() => {'title': title, 'image': image};
 }
