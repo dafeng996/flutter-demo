@@ -13,8 +13,6 @@ class HomeController extends GetxController {
     bannerList.forEach((element) {
       this.bannerList.add(element.obs);
     });
-    print(this.bannerList);
-    print('onready');
     super.onReady();
   }
 }

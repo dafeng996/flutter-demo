@@ -9,9 +9,8 @@ class Header extends StatelessWidget {
     Widget pageView = GetBuilder<HomeController>(
         builder: (c) => Obx(() => PageView(
             children: c.bannerList
-                .map((banner) => Obx(() => Text(
-                      "${banner.value.title}",
-                      style: TextStyle(color: Colors.white),
+                .map((banner) => Obx(() => Image(
+                      image: NetworkImage("${banner.value.image}"),
                     )))
                 .toList())));
 

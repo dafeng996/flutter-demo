@@ -10,9 +10,15 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp.router(
-        debugShowCheckedModeBanner: true,
-        enableLog: true,
-        getPages: AppPages.routes);
+    return GetMaterialApp(
+      initialRoute: '/',
+      debugShowCheckedModeBanner: true,
+      enableLog: true,
+      getPages: AppPages.routes,
+    );
+    //return GetMaterialApp.router(
+    //    debugShowCheckedModeBanner: true,
+    //    enableLog: true,
+    //    getPages: AppPages.routes);
   }
 }
